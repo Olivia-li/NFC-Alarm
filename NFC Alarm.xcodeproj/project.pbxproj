@@ -13,6 +13,7 @@
 		45D80019244AA068008890A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D80017244AA068008890A2 /* Main.storyboard */; };
 		45D8001B244AA069008890A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D8001A244AA069008890A2 /* Assets.xcassets */; };
 		45D8001E244AA069008890A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D8001C244AA069008890A2 /* LaunchScreen.storyboard */; };
+		45D8002C244AA8F9008890A2 /* ViewController - CoreNFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D8002B244AA8F9008890A2 /* ViewController - CoreNFC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		45D8001A244AA069008890A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45D8001D244AA069008890A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D8001F244AA069008890A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D80025244AA55E008890A2 /* NFC Alarm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NFC Alarm.entitlements"; sourceTree = "<group>"; };
+		45D8002B244AA8F9008890A2 /* ViewController - CoreNFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController - CoreNFC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +59,33 @@
 		45D80010244AA068008890A2 /* NFC Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				45D80028244AA685008890A2 /* Controller */,
+				45D80026244AA652008890A2 /* Resources */,
+			);
+			path = "NFC Alarm";
+			sourceTree = "<group>";
+		};
+		45D80026244AA652008890A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45D80025244AA55E008890A2 /* NFC Alarm.entitlements */,
 				45D80011244AA068008890A2 /* AppDelegate.swift */,
 				45D80013244AA068008890A2 /* SceneDelegate.swift */,
-				45D80015244AA068008890A2 /* ViewController.swift */,
 				45D80017244AA068008890A2 /* Main.storyboard */,
 				45D8001A244AA069008890A2 /* Assets.xcassets */,
 				45D8001C244AA069008890A2 /* LaunchScreen.storyboard */,
 				45D8001F244AA069008890A2 /* Info.plist */,
 			);
-			path = "NFC Alarm";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		45D80028244AA685008890A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45D80015244AA068008890A2 /* ViewController.swift */,
+				45D8002B244AA8F9008890A2 /* ViewController - CoreNFC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D80016244AA068008890A2 /* ViewController.swift in Sources */,
+				45D8002C244AA8F9008890A2 /* ViewController - CoreNFC.swift in Sources */,
 				45D80012244AA068008890A2 /* AppDelegate.swift in Sources */,
 				45D80014244AA068008890A2 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,8 +306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NFC Alarm/Resources/NFC Alarm.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "NFC Alarm/Info.plist";
+				DEVELOPMENT_TEAM = RSR8K28Z58;
+				INFOPLIST_FILE = "NFC Alarm/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,8 +325,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "NFC Alarm/Resources/NFC Alarm.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "NFC Alarm/Info.plist";
+				DEVELOPMENT_TEAM = RSR8K28Z58;
+				INFOPLIST_FILE = "NFC Alarm/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
